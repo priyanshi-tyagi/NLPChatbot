@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+
+{% block content %}
+        
+<div class="container-fluid">
+  <div class="row">
+
+    <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse"> 
+      <div class="sidebar-header card-img-overlay">
+        <h5>Dataset Features</h5>
+    </div>
+      <div class="position-sticky pt-3">
+        <ul class="nav flex-column nav nav-sidebar">
+          {% for col in cols %}
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" >
+              {{ col }}
+            </a>                    
+          </li>
+          {% endfor %}
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page">
+              Potential Accident Level
+            </a>
+          </li>
+        </ul>
+      </div>
+      </nav>
+
+    <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4"> 
+      <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+        <h1 class="h2" id="heading">Country</h1>
+        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+          <label class="btn btn-warning active">
+            <input type="radio" onclick="univariate()" name="options" id="option1" autocomplete="off" checked> Univariate
+          </label>
+          <label class="btn btn-warning">
+            <input type="radio" onclick="bivariate()" name="options" id="option2" autocomplete="off"> Bivariate
+          </label>
+        </div>
+      </div>
+      
+      <canvas class="my-4 w-100" id="uniVariateChart" width="900" height="380"></canvas>
+      <canvas class="my-4 w-100" id="biVariateChart" width="900" height="380"></canvas>
+
+      <h3>Insights</h3>
+
+      <div id = "univariate_insights" style="display:none">
+      {% for key, values in univariate_insights.items %}
+          <div id="{{key}}" style="display:none" class="insights">          
+          {% for v in values %}
+          <p>- {{v}}</p>
+          {% endfor %}
+        </div>
+      {% endfor %}
+    </div>
+
+    <div id = "bivariate_insights" style="display:none">
+      {% for key, values in bivariate_insights.items %}
+          <div id="{{key}}" style="display:none" class="insights">          
+          {% for v in values %}
+          <p>- {{v}}</p>
+          {% endfor %}
+        </div>
+      {% endfor %}
+    </div>
+    
+
+    </main>
+
+  </div>
+</div>
+
+{% endblock content %}

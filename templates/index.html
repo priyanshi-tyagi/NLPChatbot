@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<main class="container">
+    <div class="p-4 p-md-5 mb-4 text-white rounded bg-dark imgshow">
+        <div class="col-md-6 px-0 blog-p text-dark ">
+            <h1 class="display-4 fst-italic blog-text">Safety Solutions for your Industry</h1>
+            <p class="lead my-3 blog-text fw-normal">We carry out predictive analytics on real time data for a good cause, which can help manufacturing plants in saving people lives!</p>
+            <p class="lead mb-0 blog-text"><a href="https://bit.ly/3gvtPYn" target="_blank" class="text-white fw-bold">View report...</a></p>
+        </div>
+    </div>
+
+    <div class="row mb-2">
+        <div class="col-md-6">
+            <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                <div class="col p-4 d-flex flex-column position-static">
+                    <h3 class="mb-0 text-primary">Statistics</h3>
+                    <p class="card-text mb-auto">Explore univariate and bivariate analysis conducted on features of this dataset.</p>
+                    <a href="{% url 'dashboard' %}" class="stretched-link">Go to Tab</a>
+                </div>
+                <div class="col-auto d-none d-lg-block">
+                    <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg"
+                        role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice"
+                        focusable="false">
+                        <defs>
+                            <pattern id="imgpattern" x="0" y="0" width="1" height="1" viewBox="0 0 1024 576"
+                                preserveAspectRatio="xMidYMid slice">
+                                <image width="1024" height="576" xlink:href="static/images/statistics.jpg" />
+                            </pattern>
+                        </defs>
+                        
+                        <title>Statistics</title>
+                        <rect width="100%" height="100%" fill="url(#imgpattern)" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                <div class="col p-4 d-flex flex-column position-static">
+                    <h3 class="mb-0 text-success">AI/ML Models</h3>
+                    <p class="mb-auto">See which AI/ ML models are used in our analysis and also how they performed.</p>
+                    <a href="{% url 'aiml_models' %}" class="stretched-link">Go To Tab</a>
+                </div>
+                <div class="col-auto d-none d-lg-block">
+                    <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg"
+                        role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice"
+                        focusable="false">
+                        <defs>
+                            <pattern id="imgpattern2" x="0" y="0" width="1" height="1" viewBox="0 0 1024 576"
+                                preserveAspectRatio="xMidYMid slice">
+                                <image width="1024" height="576" xlink:href="static/images/aiml.png" />
+                            </pattern>
+                        </defs>
+
+                        <title>AI/ML Models</title>
+                        <rect width="100%" height="100%" fill="url(#imgpattern2)" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</main><!-- /.container -->
+
+{% endblock content %}

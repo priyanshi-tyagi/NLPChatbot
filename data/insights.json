@@ -1,0 +1,69 @@
+{
+    "univariate":{
+        "Country": ["Country_01 has recorded most accidents with Severe Accident Potential followed by Country_02 and Country_03"],     
+        "Local": [
+        "Local_03 has recorded maximum number of accidents which is approx 21% of all the plants in the country.", 
+        "This is followed by Local-05, Local-01 and so on."
+        ], 
+        "Industry_Sector": [
+            "It clearly indicates that mining industries witness more accidents.",
+            "We can say that the number of accidents in Mining Industry is considerably more than that in the Metal Industry, therefore mining job is more risky than the latter."
+        ], 
+        "Accident_Level": [
+            "Level I signifies not severe and V  signifies very severe.",
+            "Accidents with the level I are most common. These are due to small misses, like people forgot their PPE, or they dropped a tool, etc."
+        ],
+        "Gender": [
+            "As a characteristic of the industry, the proportion of Men employees is overwhelming.",
+            "The dataset is biased towards Male employees."
+        ],
+        "Employee_Type": [
+            "Total number of Direct Employees and Third party employees are almost same, However, Third party remote employees are less in number."
+        ], 
+        "Critical_Risk": [
+            "Most of the Critical Risks are classified as 'Others' that is almost 50% of the dataset, hence there are too many risks need to be classified precisely.",
+            "This is followed by Pressed, Manual tools, Chemical substances, Cut etc.."
+        ], 
+        "Potential_Accident_Level": [
+            "Potential accident level indicates how severe the accident would been due to other factors involved in the accidents.",
+            "Potential accident level IV has the highest count and signifies the moderate severity of accidents.",
+            "We have to check the correlation of this Potential Accident level and Accident level along with the industry sector."
+        ]
+
+    },
+    "bivariate":
+    {
+        "Country": [
+            "Country_01 has more number of severe accidents especially Level IV",
+            "Country_02 has moderate accidents across all the levels",
+            "Country_03 'level I' accidents counts is more compared to country_01 and country_02 but less severe accidents."
+        ],         
+        "Local": [
+            "Local_03 (which also belongs to Country_01) is where most of the accidents happen"
+        ],
+        "Industry_Sector": [
+            "Out of all industries, Mining Industry has seen some accidents whose level is the most severe and the corresponding potential Accident level is also highest.",
+            "This is followed by Metal industry and other.",
+            "Severity levels of the incidents are more in Mining sector (rate of level 4 is slightly higher than the level 2 & 3)"
+        ],
+        "Accident_Level": [
+            "Most Level I accidents had the potential of being much Severe i.e. of Potential Level IV"
+        ], 
+        "Gender": [
+            "Men are most likely to face High Potential Accidents of Level IV and III followed II and V",
+            "Women are most likely to face Moderate Potential Accidents of Level II and III followed IV and V"
+        ],        
+        "Employee_Type": [
+            "Third Party Employees are more involved in Accidents",
+            "We can observe that apart from Accident_Level_1 the people are also facing severe accidents (Accident_Level_IV) in the industry."
+        ],
+        "Critical_Risk": [
+            "Accidents labeled with Pressed as Critical Risk tend to be much severe i.e. of Level IV",
+            "Accidents labeled with Manual Tools as Critical Risk tend to be less severe i.e. of Level I",
+            "Accidents labeled with Pressurized Systems as Critical Risk tend to be moderate i.e. of Level II or III"
+        ],         
+        "Potential_Accident_Level": [
+            "This is our Target column."
+        ]
+    }
+}

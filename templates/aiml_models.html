@@ -1,0 +1,278 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% load static %}
+<div class="container py-5" id="featured-3">
+  <h2 class="pb-2 border-bottom">ML Classifiers</h2>
+  <div class="row g-5 py-5">
+    <div class="feature col-md-12">
+      <!--<h2>Bag Of Words</h2>-->
+      <table class="table table-hover">
+        <thead class="thead-light">
+          <tr>
+            <th scope="col"></th>
+            <th scope="col">Algo</th>
+            <th scope="col">BOW</th>
+            <th scope="col">TF-IDF</th>
+            <th scope="col">CBOW</th>
+            <th scope="col">Skip Gram</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>LogReg</td>
+            <td>0.457831</td>
+            <td>0.373494</td>
+            <td>0.325301</td>
+            <td>0.313253</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Naive Bayes</td>
+            <td>0.385542</td>
+            <td>0.433735</td>
+            <td>0.228916</td>
+            <td>0.240964</td>
+          </tr>
+          <tr>
+            <th>3</th>
+            <td>KNN</td>
+            <td>0.277108</td>
+            <td>0.349398</td>
+            <td>0.204819</td>
+            <td>0.216867</td>
+          </tr>
+          <tr>
+            <th>4</th>
+            <td>SVM</td>
+            <td>0.409639</td>
+            <td>0.373494</td>
+            <td>0.325301</td>
+            <td>0.325301</td>
+          </tr>
+          <tr>
+            <th>5</th>
+            <td>Decision Tree</td>
+            <td>0.349398</td>
+            <td>0.301205</td>
+            <td>0.373494</td>
+            <td>0.337349</td>
+          </tr>
+          <tr>
+            <th>6</th>
+            <td>RandomForest</td>
+            <td>0.349398</td>
+            <td>0.325301</td>
+            <td>0.337349</td>
+            <td>0.325301</td>
+          </tr>
+          <tr>
+            <th>7</th>
+            <td>Bagging</td>
+            <td>0.373494</td>
+            <td>0.325301</td>
+            <td>0.337349</td>
+            <td>0.349398</td>
+          </tr>
+          <tr>
+            <th>8</th>
+            <td>AdaBoost</td>
+            <td>0.313253</td>
+            <td>0.289157</td>
+            <td>0.240964</td>
+            <td>0.313253</td>
+          </tr>
+          <tr>
+            <th>9</th>
+            <td>Gradient Boost</td>
+            <td>0.349398</td>
+            <td>0.385542</td>
+            <td>0.325301</td>
+            <td>0.325301</td>
+          </tr>
+          <tr>
+            <th>10</th>
+            <td>XGBoost</td>
+            <td>0.361446</td>
+            <td>0.301205</td>
+            <td>0.361446</td>
+            <td>0.289157</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+
+</div>
+
+<div class="b-example-divider"></div>
+
+<div class="container py-5" id="featured-3">
+  <h2 class="pb-2 border-bottom">NN Architectures</h2>
+  <div class="blog-text"></div>
+  <div class="row">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title text-center">BOW</h5>
+        <img src="{% static 'images/models/bow_model.png' %}" class="card-img-top">
+      </div>
+    </div>
+    <div class="card m-lg-auto">
+      <div class="card-body">
+        <h5 class="card-title text-center">CBOW</h5>
+        <img src="{% static 'images/models/cbow_model.png' %}" class="card-img-top">
+      </div>
+    </div>
+  </div>
+  <div class="blog-text"></div>
+  <div class="row">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title text-center">TF IDF</h5>
+        <img src="{% static 'images/models/tfidf_model.png' %}" class="card-img-top">
+      </div>
+    </div>
+    <div class="card m-lg-auto">
+      <div class="card-body">
+        <h5 class="card-title text-center">Glove</h5>
+        <img src="{% static 'images/models/glove_model.png' %}" class="card-img-top">
+      </div>
+    </div>
+  </div>
+  <div class="blog-text"></div>
+  <div class="row">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title text-center">Skip Gram</h5>
+        <img src="{% static 'images/models/skipgram_model.png' %}" class="card-img-top">
+      </div>
+    </div>
+    <div class="card m-lg-auto">
+      <div class="card-body">
+        <h5 class="card-title text-center">Smote</h5>
+        <img src="{% static 'images/models/smote_model.png' %}" class="card-img-top">
+      </div>
+    </div>
+  </div>
+  <div class="blog-text"></div>
+
+</div>
+
+<div class="b-example-divider"></div>
+
+<div class="container py-md-5 " id="featured-3">
+  <h2 class="pb-2 border-bottom">Improving Accuracy</h2>
+  <div class="row g-5 py-5">
+    <div class="feature col-md-12">
+      <table class="table table-hover">
+        <thead class="thead-light">
+          <tr>
+            <th></th>
+            <th>Algo</th>
+            <th>SMOTE</th>
+            <th>Text Augmentation</th>
+            <th>All columns</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>1</th>
+            <td>LogReg</td>
+            <td>0.514451</td>
+            <td>0.414493</td>
+            <td>0.647399</td>
+          </tr>
+          <tr>
+            <th>2</th>
+            <td>Naive Bayes</td>
+            <td>0.271676</td>
+            <td>0.260870</td>
+            <td>0.537572</td>
+          </tr>
+          <tr>
+            <th>3</th>
+            <td>KNN</td>
+            <td>0.549133</td>
+            <td>0.585507</td>
+            <td>0.439306</td>
+          </tr>
+          <tr>
+            <th>4</th>
+            <td>SVM</td>
+            <td>0.606936</td>
+            <td>0.628986</td>
+            <td>0.589595</td>
+          </tr>
+          <tr>
+            <th>5</th>
+            <td>Decision Tree</td>
+            <td>0.352601</td>
+            <td>0.484058</td>
+            <td>0.630058</td>
+          </tr>
+          <tr>
+            <th>6</th>
+            <td>RandomForest</td>
+            <td>0.624277</td>
+            <td>0.707246</td>
+            <td>0.606936</td>
+          </tr>
+          <tr>
+            <th>7</th>
+            <td>Bagging</td>
+            <td>0.653179</td>
+            <td>0.771014</td>
+            <td>0.658960</td>
+          </tr>
+          <tr>
+            <th>8</th>
+            <td>AdaBoost</td>
+            <td>0.462428</td>
+            <td>0.515942</td>
+            <td>0.491329</td>
+          </tr>
+          <tr>
+            <th>9</th>
+            <td>Gradient Boost</td>
+            <td>0.606936</td>
+            <td>0.611594</td>
+            <td>0.578035</td>
+          </tr>
+          <tr>
+            <th>10</th>
+            <td>XGBoost</td>
+            <td>0.647399</td>
+            <td>0.718841</td>
+            <td>0.630058</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <!--<div class="row g-5 py-5">      
+      <div class="feature col-md-4">
+        <h2>SMOTE</h2>
+        <img src="{% static 'images/models/smote_model.png' %}" style="height:200px">
+        <p>Accuracy score: x%</p>
+      </div>
+      <div class="feature col-md-4">
+        <h2>Text Augmentation</h2>
+        <img src="{% static 'images/models/smote_model.png' %}" style="height:200px">
+        <p>Accuracy score: x%</p>
+      </div>
+      <div class="feature col-md-4">
+        <h2>Text Augmentation</h2>
+        <img src="{% static 'images/models/smote_model.png' %}" style="height:200px">
+        <p>Accuracy score: x%</p>
+      </div>
+    </div>-->
+</div>
+
+<div class="b-example-divider"></div>
+
+
+
+{% endblock content %}
