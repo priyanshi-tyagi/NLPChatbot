@@ -25,7 +25,7 @@ SECRET_KEY = '4d1!0q8^*z#otq0g5-*c$0j$$ex$hm!m(12e1b@tvlqi9&7nvr'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'nlp-chatbot5.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'nlp-chatbot1.herokuapp.com']
 
 
 # Application definition
